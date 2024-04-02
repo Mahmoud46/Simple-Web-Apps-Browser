@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./imgs/fav-icon.svg" type="image/x-icon">
+    <title>Imagz</title>
+</head>
+
+<body>
+    <div class="container disable">
+        <h2><img src="./imgs/main-logo.svg" width="120px" alt=""></h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <div class="options">
+                        <button id="brightness" class="active">
+                            <i>Brightness</i>
+                            <span class="material-symbols-outlined">light_mode</span></button>
+                        <button id="saturation">
+                            <i>Saturation</i>
+                            <span class="material-symbols-outlined">filter_b_and_w</span></button>
+                        <button id="inversion">
+                            <i>Inversion</i>
+                            <span class="material-symbols-outlined">invert_colors</span></button>
+                        <button id="grayscale">
+                            <i>Grayscale</i>
+                            <span class="material-symbols-outlined">contrast</span></button>
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brightness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div class="rotate">
+                    <div class="options">
+                        <button id="horizontal">
+                            <i>horizontal</i>
+                            <span class="material-symbols-outlined">border_vertical</span></button>
+                        <button id="vertical">
+                            <i>vertical</i>
+                            <span class="material-symbols-outlined">border_horizontal</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="img-view">
+                <div class="preview-img">
+                    <img src="./imgs/background_holder.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter"><span class="material-symbols-outlined">reset_image</span></button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="choose-img"><span class="material-symbols-outlined">add_photo_alternate</span></button>
+                <button class="save-img"><span class="material-symbols-outlined">save</span></button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

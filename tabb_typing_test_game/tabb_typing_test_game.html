@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="./imgs/fav-icon.svg">
+    <title>Tabb</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wnd-hdr"><img style="width: 100px;" src="./imgs/logo.svg" alt="">
+        </div>
+        <input type="text" class="input-field">
+        <div class="content-box">
+            <div class="typing-text">
+                <p></p>
+            </div>
+            <div class="content">
+                <ul class="result-details">
+                    <li class="time">
+                        <p><span class="material-symbols-outlined">timer </span><span>Time out</span></p>
+                        <span><b></b>s</span>
+                    </li>
+                    <li class="mistakes">
+                        <p><span class="material-symbols-outlined">close</span><span>Mistakes</span></p>
+                        <span class="mistakes">0</span>
+                    </li>
+                    <li class="wpm">
+                        <p><span class="material-symbols-outlined">avg_pace</span><span>Speed</span></p>
+                        <span class="wpm">0</span>
+                    </li>
+                    <li class="cpm">
+                        <p><span class="material-symbols-outlined">check</span><span>Correct</span></p>
+                        <span class="cpm">0</span>
+                    </li>
+                </ul>
+                <span class="tr-ag-btn">Try Again</span>
+            </div>
+        </div>
+    </div>
+    <div class="tms-up-wind">
+        <span class="material-symbols-outlined">sentiment_very_dissatisfied</span>
+        <span>Opps! Time is up</span>
+        <span class="material-symbols-outlined cls-tms-up-wnd"> close</span>
+        <span>To try a new game, close the current window and enter TRY AGAIN button.</span>
+    </div>
+    <div class="ex-dn-wnd">
+        <span class="material-symbols-outlined">sentiment_very_satisfied</span>
+        <span>Well Done! You did it in <b>20</b> seconds</span>
+        <span class="material-symbols-outlined cls-ex-dn-wnd" style="display: none;"> close</span>
+        <span class="try-agn-btn">Try Again</span>
+    </div>
+    <script src="./js/paragraphs.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

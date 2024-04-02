@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Chivo+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Great+Vibes&family=Italiana&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sorts+Mill+Goudy:ital@0;1&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #e62c13;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+body .logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  margin-top: 20px;
+}
+body .logos::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+body img.mz-logo {
+  width: 30px;
+}
+body img.brand-icon {
+  width: 40px;
+}
+body img.brandname {
+  width: 200px;
+}
+body h1 {
+  font-size: 60px;
+  text-align: center;
+  color: #fff;
+  width: 70%;
+  line-height: 50px;
+}
+body .apps-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-bottom: 20px;
+}
+body .apps-cont a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90px;
+  height: 90px;
+  position: relative;
+  gap: 10px;
+  margin-top: 20px;
+}
+body .apps-cont a::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  top: -20%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: 1s ease-in-out all;
+  opacity: 0;
+}
+body .apps-cont a:hover img {
+  transform: translateY(0);
+}
+body .apps-cont a:hover span {
+  transform: translateY(0px);
+  opacity: 1;
+}
+body .apps-cont a:hover::before {
+  opacity: 1;
+}
+body .apps-cont a img {
+  height: 60px;
+  transform: translateY(10px);
+  transition: 0.5s ease-in-out all;
+  z-index: 111111;
+}
+body .apps-cont a span {
+  transform: translateY(-30px);
+  transition: 0.5s ease-in-out all;
+  opacity: 0;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Chivo+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Great+Vibes&family=Italiana&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sorts+Mill+Goudy:ital@0;1&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(130, 105, 43, 0.5), rgba(103, 86, 44, 0.9)), url('../imgs/calculator-on-table-free-photo.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 350px;
+    background: rgba(241, 181, 40, 0.2);
+    backdrop-filter: blur(15px);
+    color: #30302e;
+}
+
+.output-val {
+    width: 350px;
+    height: 100px;
+    background: rgba(48, 48, 46, 0.6);
+    padding: 15px;
+}
+
+.val {
+    height: 100%;
+    width: 100%;
+    font-size: 35px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    overflow: auto;
+    padding: 0 20px;
+    text-align: end;
+    color: rgba(252, 252, 252, 0.5);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    width: calc(100% / 4);
+    height: 40px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.5s ease-in-out all;
+    background: rgba(75, 67, 45, 0.5);
+    color: rgba(252, 252, 252, 0.5);
+    font-size: 18px;
+}
+
+.buttons button.r {
+    height: 75px;
+}
+
+.buttons button.r.n {
+    font-size: 25px;
+}
+
+.buttons button:hover {
+    background: #30302e;
+    color: #fcfcfc;
+}
+
+h1 {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

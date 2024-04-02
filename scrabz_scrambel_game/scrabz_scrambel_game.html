@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./imgs/fav-icon.svg" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Scrabz</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2><img src="./imgs/main-logo.svg" style="width: 170px;" alt=""></h2>
+        <div class="content">
+            <p class="word"></p>
+            <div class="details">
+                <p class="hint"><span class="material-symbols-outlined icn">reminder</span><span class="hnt"></span></p>
+                <p class="time"><span class="material-symbols-outlined icn">timer</span><span><b>30</b>s</span></p>
+            </div>
+            <div class="input-field">
+                <span>Enter A Valid Word</span>
+                <input type="text">
+            </div>
+            <div class="buttons">
+                <button class="refresh-word">Refresh Word</button>
+                <button class="check-word">Check Word</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert correct">
+        <div class="wnd">
+            <span class="material-symbols-outlined ex-icn">sentiment_very_satisfied</span>
+            <p>Congrats! <span>Hello</span> is a correct word</p>
+            <button class="try-agian">Try Again</button>
+        </div>
+    </div>
+    <div class="alert incorrect">
+        <div class="wnd">
+            <span class="material-symbols-outlined ex-icn">sentiment_very_dissatisfied</span>
+            <p>Oops! <span>Hello</span> is not a correct word</p>
+            <button class="try-agian">Try Again</button>
+        </div>
+    </div>
+    <div class="alert time-up">
+        <div class="wnd">
+            <span class="material-symbols-outlined ex-icn">alarm</span>
+            <p>Time off! <span>Feather</span> was the correct answer</p>
+            <button class="try-agian">Try Again</button>
+        </div>
+    </div>
+    <div class="alert empty-field">
+        <div class="wnd">
+            <span class="material-symbols-outlined ex-icn">text_fields</span>
+            <p>Please enter a word to check</p>
+            <span class="material-symbols-outlined em-fl-cls">close</span>
+        </div>
+    </div>
+    <script src="./js/words.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

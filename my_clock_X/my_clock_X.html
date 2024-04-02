@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./imgs/fav-icon.svg" type="image/x-icon">
+    <title>My Clock X</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <h1><img src="./imgs/main-logo.svg" width="90px" alt=""></h1>
+        <div class="clock">
+            <div class="hours">
+                <span class="num" id="hrs">01</span>
+                <span class="hr">hours</span>
+            </div>
+            <div class="minutes">
+                <span class="num" id="min">01</span>
+                <span class="min">minutes</span>
+            </div>
+            <div class="seconds">
+                <span class="num" id="sec">01</span>
+                <span class="sec">seconds</span>
+            </div>
+            <div class="time-zone" id="time-zone">
+                <span>AM</span>
+            </div>
+        </div>
+        <div class="day">
+            <span class="name" id="name">saturday</span>
+            <div class="date">
+                <div class="day-st">
+                    <span class="day-num" id="day-num">01</span>
+                    <span>Day</span>
+                </div>
+                <p>/</p>
+                <div class="month-st">
+                    <span class="month-num" id="month-num">01</span>
+                    <span class="month-name" id="month-name">January</span>
+                </div>
+                <p>/</p>
+                <div class="year-st">
+                    <span class="year-num" id="year-num">2022</span>
+                    <span>Year</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".container"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

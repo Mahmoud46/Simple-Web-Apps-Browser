@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(225, 180, 151, 0.5), rgba(222, 147, 125, 0.9)), url('../imgs/wp4835477.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    background: rgba(252, 252, 252, 0.4);
+    overflow: hidden;
+    z-index: 10;
+    backdrop-filter: blur(15px);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    min-width: 375px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.container .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20%;
+    color: #d9514a;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+
+.container .day .name {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgba(222, 147, 125, 0.3);
+}
+
+.day .date {
+    display: flex;
+    justify-content: center;
+    margin-left: 40px;
+    gap: 20px;
+    align-items: center;
+}
+
+.day .date p {
+    font-size: 20px;
+}
+
+.date .day-st,
+.date .month-st,
+.date .year-st {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+}
+
+.date .day-st .day-num,
+.date .month-st .month-num,
+.date .year-st .year-num {
+    font-size: 20px;
+}
+
+.container .clock {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.clock .hours,
+.clock .minutes,
+.clock .seconds {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #db7263;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 50%;
+    text-transform: uppercase;
+    color: #d9514a;
+}
+
+.clock .hours .num,
+.clock .minutes .num,
+.clock .seconds .num {
+    font-size: 40px;
+}
+
+.clock .hours .hr,
+.clock .minutes .min,
+.clock .seconds .sec {
+    font-size: 10px;
+}
+
+.clock .time-zone {
+    color: #d9514a;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 100px;
+    position: relative;
+}
+
+#time-zone span {
+    position: absolute;
+    border: 1px solid rgba(222, 147, 125, 0.1);
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(222, 147, 125, 0.2);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

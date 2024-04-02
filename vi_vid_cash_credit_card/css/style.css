@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Chivo+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+    overflow: hidden;
+    background: linear-gradient(rgba(154, 171, 250, 0.5), rgba(129, 151, 250, 0.9)), url('../imgs/credit-card-zd1f32hlhrhhourr.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container form {
+    background: rgba(252, 252, 252, 0.5);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 500px;
+    padding-top: 180px;
+    backdrop-filter: blur(15px);
+}
+
+.container form .input-box {
+    margin-top: 20px;
+    position: relative;
+}
+
+.container form .input-box span {
+    color: #fcfcfc;
+    position: absolute;
+    background: #516ffa;
+    padding: 0 10px;
+    font-size: 12px;
+    top: -10px;
+    left: 10px;
+}
+
+.container form .input-box input,
+.container form .input-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #516ffa;
+    color: #516ffa;
+    height: 100%;
+    background: none;
+    padding-left: 20px;
+}
+
+
+.container form .flexbox {
+    display: flex;
+    gap: 15px;
+}
+
+.container form .flexbox .input-box {
+    flex: 1 1 150px;
+}
+
+.container form .submit-btn {
+    width: 100%;
+    background: none;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color: #fcfcfc;
+    cursor: pointer;
+    border: #8197fa solid 1px;
+    transition: 0.5s ease-in-out all;
+    background: #8197fa;
+}
+
+.container form .submit-btn:hover {
+    border: #516ffa solid 1px;
+    color: #fcfcfc;
+    background: #516ffa;
+}
+
+.container .card-container {
+    margin-bottom: -170px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+    margin-top: 10px;
+    z-index: 99999999999;
+}
+
+.container .card-container .front {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(252, 252, 252, 0.5);
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.5s ease-in-out;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+}
+
+.container .card-container .front::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(81, 111, 250, 0.6);
+    z-index: -1;
+    top: -200px;
+    right: -250px;
+    border-radius: 50%;
+    transform: rotateY(20deg);
+}
+
+.card-container .front .images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.card-container .front .images img {
+    height: 50px;
+}
+
+.card-container .front .images img:last-child {
+    height: 70px;
+}
+
+.card-container .front .card-number-box {
+    padding: 30px 0;
+    font-size: 22px;
+    color: #516ffa;
+}
+
+.card-container .front .flexbox {
+    display: flex;
+}
+
+.card-container .front .flexbox .box:nth-child(1) {
+    margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box {
+    font-size: 15px;
+    color: #516ffa;
+}
+
+.container .card-container .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(252, 252, 252, 0.5);
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform 0.5s ease-in-out;
+    backdrop-filter: blur(15px);
+
+}
+
+.card-container .back .stripe {
+    background: #000;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+}
+
+.card-container .back .box {
+    padding: 0 20px;
+}
+
+.back .box span {
+    color: #516ffa;
+    font-size: 15px;
+}
+
+.card-container .back .box .cvv-box {
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color: #516ffa;
+    background: rgba(252, 252, 252, 0.5);
+    width: 100%;
+}
+
+.card-container .back .box img {
+    margin-top: 20px;
+    height: 50px;
+}

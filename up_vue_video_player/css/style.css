@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Chivo+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgba(240, 112, 86, 0.5), rgba(179, 93, 76, 0.9)), url('../imgs/80-800730_free-fantasy-landscape-wallpapers-for-iphone-long.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+body,
+.video-controls,
+.options,
+.video-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 900px;
+    width: 98%;
+    background: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.container.fullscreen {
+    max-width: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.08s ease-in-out;
+}
+
+.container.show-controls .wrapper {
+    bottom: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.13s ease-in-out;
+}
+
+.wrapper::before {
+    content: '';
+    bottom: 0px;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    background: linear-gradient(to top, rgba(58, 56, 57, 0.5), transparent);
+    height: calc(100% + 35px);
+    margin-bottom: 7px;
+}
+
+.wrapper.at-full::before {
+    margin-bottom: 0px;
+}
+
+.video-timeline {
+    height: 7px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.progress-area span,
+.progress-area .progress-bar::before {
+    display: none;
+}
+
+.video-timeline:hover .progress-area span,
+.video-timeline:hover .progress-area .progress-bar::before {
+    display: block;
+}
+
+.video-timeline .progress-area {
+    height: 3px;
+    background: rgb(179, 93, 76, 0.3);
+    position: relative;
+}
+
+.progress-area .progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #f07056;
+    position: relative;
+}
+
+.progress-area .progress-bar::before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    height: 13px;
+    width: 13px;
+    background: inherit;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.progress-area span {
+    position: absolute;
+    left: 50%;
+    top: -35px;
+    font-size: 13px;
+    color: #fff;
+    transform: translateX(-50%);
+    background: #f07056;
+    padding: 0 10px;
+}
+
+.progress-area span::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    height: 10px;
+    width: 10px;
+    background: #f07056;
+    z-index: -1;
+    left: 50%;
+    transform: rotate(45deg) translateX(-50%);
+}
+
+.video-controls {
+    padding: 5px 20px 10px;
+    margin-bottom: 7px;
+}
+
+.video-controls .options:first-child {
+    justify-content: flex-start;
+}
+
+.video-controls .options:last-child {
+    justify-content: flex-end;
+}
+
+.video-controls .options {
+    width: 100%;
+}
+
+.options button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    color: #f07056;
+    background: none;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.options button :where(i, span) {
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    transition: 0.5s ease-in-out all;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options button :where(i, span):hover {
+    background: rgba(240, 112, 86, 0.5);
+    color: #fcfcfc;
+}
+
+.options input {
+    -webkit-appearance: none;
+    height: 5px;
+    max-width: 75px;
+    background: rgba(252, 252, 252, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.options input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 2px;
+    height: 10px;
+    background: rgb(240, 112, 86, 0.5);
+    box-shadow: -400px 0 0 400px #f07056;
+}
+
+.options .video-timer {
+    font-size: 14px;
+    color: #f07056;
+    margin-left: 15px;
+}
+
+.video-timer .separator {
+    font-size: 16px;
+    margin: 0 5px;
+    font-family: 'Open sans';
+}
+
+.playback-content {
+    position: relative;
+}
+
+.playback-content .speed-options {
+    position: absolute;
+    background: rgb(252, 252, 252, 0.5);
+    bottom: 40px;
+    left: -40px;
+    list-style: none;
+    width: 95px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.13s ease;
+    backdrop-filter: blur(15px);
+}
+
+
+.speed-options.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.speed-options li {
+    font-size: 14px;
+    padding: 5px 0 5px 15px;
+    cursor: pointer;
+}
+
+.speed-options li.active,
+.speed-options li:hover {
+    color: #fcfcfc;
+    background: rgba(240, 112, 86, 0.6);
+    backdrop-filter: blur(15px);
+}
+
+.container video {
+    width: 100%;
+    height: 100%;
+}
+
+.volume {
+    margin-right: 5px;
+}
+
+h1 {
+    position: absolute;
+    z-index: 555555555555555555555555555555555555555555555;
+    top: 0;
+    left: 0;
+    width: 150px;
+    padding: 20px;
+}
+
+.upload-window {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(240, 112, 86, 0.5), rgba(179, 93, 76, 0.9));
+    backdrop-filter: blur(15px);
+    z-index: 99999999999999999999999999999999999999999999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.layout {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(58, 56, 57, 0.5);
+    backdrop-filter: blur(15px);
+    z-index: 10000000000000000000000000000000000000000000;
+    display: none;
+}
+
+.layout.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

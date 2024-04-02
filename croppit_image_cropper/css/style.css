@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Chivo+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Great+Vibes&family=Italiana&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sorts+Mill+Goudy:ital@0;1&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    background: linear-gradient(rgb(221, 168, 159, 0.5), rgba(206, 131, 123, 0.9)), url('../imgs/145d205ae658a0c7b2834d37ea8f3525.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    background: rgba(252, 252, 252, 0.4);
+    width: 450px;
+    height: 600px;
+    backdrop-filter: blur(15px);
+    position: relative;
+}
+
+.image-container {
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    padding-top: 45px;
+}
+
+.image-workspace {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.image-workspace span {
+    position: absolute;
+}
+
+.container .img-wrk {
+    /* width: 100%; */
+    height: 100%;
+    display: block;
+}
+
+.cropper-point.point-se {
+    height: 5px;
+    width: 5px;
+}
+
+.preview-container {
+    display: flex;
+    max-height: 30%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-top: 0.5px solid rgba(191, 94, 87, 0.5);
+    padding: 10px;
+}
+
+.preview-cover {
+    overflow: hidden;
+}
+
+.preview-container span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+}
+
+.buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+.buttons button {
+    background: rgb(177, 58, 52, 0.7);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease-in-out all;
+}
+
+.buttons button span {
+    font-size: 25px;
+    padding: 10px;
+    color: rgb(252, 252, 252, 0.8);
+    transition: 0.5s ease-in-out all;
+}
+
+.buttons button.inactive {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.buttons button:hover {
+    background: rgb(177, 58, 52, 1);
+}
+
+.buttons button:hover span {
+    color: rgb(252, 252, 252, 1);
+}
+
+.control-buttons {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+.control-buttons.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.control-buttons button {
+    position: relative;
+    background: rgb(177, 58, 52, 0.7);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease-in-out all;
+    color: rgb(252, 252, 252, 0.8);
+}
+
+.control-buttons button span:first-child {
+    font-size: 25px;
+    padding: 10px;
+    transition: 0.5s ease-in-out all;
+}
+
+.control-buttons button:hover {
+    background: rgb(177, 58, 52, 1);
+}
+
+.control-buttons button.active {
+    background: rgb(177, 58, 52, 1);
+}
+
+.control-buttons button.active span:first-child {
+    color: rgb(252, 252, 252, 1);
+}
+
+.control-buttons button:hover span:first-child {
+    color: rgb(252, 252, 252, 1);
+}
+
+.control-buttons button span:last-child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(177, 58, 52, 1);
+    padding: 10px;
+    color: #fcfcfc;
+    left: 60px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+.control-buttons button:hover span:last-child {
+    opacity: 1;
+    pointer-events: none;
+
+}
+
+.control-buttons button span:last-child::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -10px;
+    background: rgb(177, 58, 52, 1);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.option-buttons {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+
+.option-buttons button {
+    background: rgb(177, 58, 52, 0.7);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease-in-out all;
+}
+
+.option-buttons button span {
+    font-size: 25px;
+    padding: 10px;
+    color: rgb(252, 252, 252, 0.8);
+    transition: 0.5s ease-in-out all;
+}
+
+.option-buttons button.control-buttons.active,
+.option-buttons button:hover {
+    background: rgb(177, 58, 52, 1);
+}
+
+.option-buttons button:hover span {
+    color: rgb(252, 252, 252, 1);
+}
+
+.ar {
+    position: relative;
+}
+
+.ar span:last-child {
+    position: absolute;
+    font-size: 14px;
+    top: 58px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(177, 58, 52, 1);
+    text-transform: uppercase;
+    opacity: 0;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+.ar span:last-child::before {
+    position: absolute;
+    content: '';
+    top: -3px;
+    width: 20px;
+    height: 20px;
+    background: rgb(177, 58, 52, 1);
+    z-index: -1;
+    transform: rotate(45deg) translateX(-50%);
+    left: 50%;
+}
+
+.ar:hover span:last-child {
+    opacity: 1;
+    pointer-events: all;
+}

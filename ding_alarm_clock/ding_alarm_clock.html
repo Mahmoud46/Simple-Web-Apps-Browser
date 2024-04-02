@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./imgs/fav-icon.svg" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Ding</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>
+            <img src="./imgs/main-logo.svg" alt="">
+            <p>Digital Alarm</p>
+        </h2>
+        <h1>00:00:00 PM</h1>
+        <div class="content">
+            <div class="column">
+                <select>
+                    <option value="Hour" selected disabled>Hour</option>
+                </select>
+            </div>
+            <div class="column">
+                <select>
+                    <option value="Minutes" selected disabled>Minutes</option>
+                </select>
+            </div>
+            <div class="column">
+                <select>
+                    <option value="AM/PM" selected disabled>AM/PM</option>
+                </select>
+            </div>
+        </div>
+        <button>Set Alarm</button>
+    </div>
+
+    <div class="ring">
+        <div class="ring-cont">
+            <span class="material-symbols-outlined">alarm_on</span>
+            <span>alarm is activated!</span>
+            <span class="material-symbols-outlined">close</span>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

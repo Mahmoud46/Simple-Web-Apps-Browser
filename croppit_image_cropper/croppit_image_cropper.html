@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.css"
+        integrity="sha512-C4k/QrN4udgZnXStNFS5osxdhVECWyhMsK1pnlk+LkC7yJGCqoYxW4mH3/ZXLweODyzolwdWSqmmadudSHMRLA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/cropper.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./imgs/fav-icon.svg" type="image/x-icon">
+    <title>Croppit</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-container">
+            <div class="image-workspace">
+                <img src="" alt="" class="img-wrk">
+                <span class="kk"><img src="./imgs/main-logo.svg" width="300px" alt=""></span>
+            </div>
+        </div>
+        <div class="preview-container">
+            <div class="preview-cover">
+                <div class="img-preview" style="height: 10rem; width:18rem"></div>
+                <span class="kk"><img src="./imgs/fav-icon.svg" width="100x" alt=""></span>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="download inactive"><span class="material-symbols-outlined">
+                    download
+                </span></button>
+            <button class="upload"><span class="material-symbols-outlined">
+                    upload
+                </span></button>
+            <button class="menu inactive"><span class="material-symbols-outlined">
+                    menu
+                </span></button>
+            <input type="file" id="main-img" hidden>
+        </div>
+        <div class="control-buttons">
+            <button class="rotate"><span class="material-symbols-outlined">
+                    crop_rotate
+                </span>
+                <span>Rotate</span></button>
+            <button class="zoom"><span class="material-symbols-outlined">
+                    center_focus_strong
+                </span><span>Zoom</span></button>
+            <button class="flip"><span class="material-symbols-outlined">
+                    flip
+                </span><span>Flip</span></button>
+            <button class="aspect_ratio"><span class="material-symbols-outlined">
+                    aspect_ratio
+                </span><span>Aspect Ratio</span></button>
+            <button class="drag_image"><span class="material-symbols-outlined">
+                    drag_pan
+                </span><span>Drag Mode</span></button>
+            <button class="lock_cropper"><span class="material-symbols-outlined">
+                    key
+                </span><span>Lock Cropper</span></button>
+            <button class="control_cropper"><span class="material-symbols-outlined">
+                    clear_all
+                </span><span>Control Cropper</span></button>
+        </div>
+        <div class="option-buttons jj">
+
+        </div>
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"
+        integrity="sha512-6lplKUSl86rUVprDIjiW8DuOniNX8UDoRATqZSds/7t6zCQZfaCe3e5zcGaQwxa8Kpn5RTM9Fvl3X2lLV4grPQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="./js/cropper.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
