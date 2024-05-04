@@ -68,6 +68,29 @@ body {
         flex-wrap: wrap;
         gap: 0;
         margin-bottom: 20px;
+        height: 300px;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        /* width */
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #fff;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #fff;
+        }
 
         a {
             text-decoration: none;

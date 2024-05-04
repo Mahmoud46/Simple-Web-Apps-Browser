@@ -59,6 +59,25 @@ body .apps-cont {
   flex-wrap: wrap;
   gap: 0;
   margin-bottom: 20px;
+  height: 300px;
+  overflow: hidden;
+  overflow-y: scroll;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body .apps-cont::-webkit-scrollbar {
+  width: 10px;
+}
+body .apps-cont::-webkit-scrollbar-track {
+  background: transparent;
+}
+body .apps-cont::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+body .apps-cont::-webkit-scrollbar-thumb:hover {
+  background: #fff;
 }
 body .apps-cont a {
   text-decoration: none;
