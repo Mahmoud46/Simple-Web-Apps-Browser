@@ -1,0 +1,126 @@
+@use './colors' as *;
+@use './calc_container' as *;
+@use './mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    // background: linear-gradient($second_color, $fifth_color);
+    background: linear-gradient(rgba($color: $second_color, $alpha: 0.5), rgba($color: $first_color, $alpha: 0.6)), url('../imgs/black-tether-cryptocurrency-di8od2gwxqb07w4d.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include flex-container(row);
+
+    .cont-container {
+        @include flex-container(column);
+        background: rgba($color: $first_color, $alpha: 0.9);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        padding: 20px 0;
+        height: 600px;
+        gap: 20px;
+
+        img.main-logo {
+            width: 200px;
+        }
+
+    }
+
+    .container {
+        position: relative;
+        @include flex-container(row);
+        flex-wrap: wrap;
+        height: 500px;
+        width: 500px;
+        overflow: hidden;
+        overflow-y: scroll;
+        gap: 20px;
+
+        .card {
+            display: flex;
+            padding: 10px;
+            width: 400px;
+            gap: 10px;
+            background: rgba($color: $fifth_color, $alpha: 0.2);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+
+            p {
+                font-size: 12px;
+
+                &:nth-child(2) {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                &>span:nth-child(2) {
+                    opacity: 0.5;
+                }
+
+            }
+
+
+            .bg-full {
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                z-index: -1;
+                top: 50%;
+                left: 70%;
+                transform: translate(-50%, -50%) rotate(30deg);
+                opacity: 0.5;
+            }
+
+            .calc {
+                position: absolute;
+                padding: 10px;
+                right: 0;
+                bottom: 0;
+                cursor: pointer;
+                color: #fff;
+                transition: 0.5s ease-in-out all;
+
+                &:hover {
+                    background: $second_color;
+                    color: #fff;
+                }
+            }
+        }
+
+        /* width */
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: $fifth_color;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: $second_color;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: $second_color;
+        }
+    }
+}

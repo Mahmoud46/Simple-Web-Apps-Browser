@@ -1,0 +1,107 @@
+@use './mixins' as *;
+@use './elements_features' as *;
+@use './colors' as *;
+
+.cal-container {
+    position: absolute;
+
+    background: rgba($color: $first_color, $alpha: 0.9);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    color: #fff;
+
+    @include flex-container(row);
+
+    transition: 0.1s ease-in-out all;
+
+    &.active {
+        width: 500px;
+        height: 600px;
+    }
+
+    .cls-btn {
+        position: absolute;
+        padding: 10px;
+        right: 0;
+        top: 0;
+
+        cursor: pointer;
+        color: #fff;
+        transition: 0.5s ease-in-out all;
+
+        &:hover {
+            background: $second_color;
+            color: #fff;
+        }
+    }
+
+    .calc-card {
+        background: rgba($color: $fifth_color, $alpha: 0.2);
+        padding: 20px;
+        @include flex-container(column);
+        gap: 20px;
+
+        .header {
+
+            @include flex-container(row);
+            gap: 10px;
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+
+            p {
+                span:nth-child(1) {
+                    font-size: 30px;
+                }
+
+                span:nth-child(2) {
+                    opacity: 0.5;
+                }
+            }
+
+        }
+
+        .card-body {
+            width: 100%;
+
+            @include flex-container(column);
+            gap: 30px;
+
+            .curr-price,
+            .curr-amount {
+                position: relative;
+
+                span {
+                    position: absolute;
+                    background: $second_color;
+                    font-size: 12px;
+                    left: 10px;
+                    top: 5px;
+                    padding: 5px;
+                }
+
+                input {
+                    height: 40px;
+                    padding: 0 20px;
+                    font-size: 30px;
+                    width: 400px;
+                    outline: none;
+                    background: none;
+                    border: none;
+                    color: #fff;
+                    padding-left: 70px;
+
+                    caret-color: $second_color;
+                }
+            }
+
+        }
+
+    }
+}

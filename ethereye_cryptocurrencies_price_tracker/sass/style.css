@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+input[type=number].no-spin-buttons::-webkit-inner-spin-button,
+input[type=number].no-spin-buttons::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cal-container {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease-in-out all;
+}
+.cal-container.active {
+  width: 500px;
+  height: 600px;
+}
+.cal-container .cls-btn {
+  position: absolute;
+  padding: 10px;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.5s ease-in-out all;
+}
+.cal-container .cls-btn:hover {
+  background: #ff632a;
+  color: #fff;
+}
+.cal-container .calc-card {
+  background: rgba(65, 64, 66, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.cal-container .calc-card .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.cal-container .calc-card .header img {
+  width: 60px;
+  height: 60px;
+}
+.cal-container .calc-card .header p span:nth-child(1) {
+  font-size: 30px;
+}
+.cal-container .calc-card .header p span:nth-child(2) {
+  opacity: 0.5;
+}
+.cal-container .calc-card .card-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.cal-container .calc-card .card-body .curr-price,
+.cal-container .calc-card .card-body .curr-amount {
+  position: relative;
+}
+.cal-container .calc-card .card-body .curr-price span,
+.cal-container .calc-card .card-body .curr-amount span {
+  position: absolute;
+  background: #ff632a;
+  font-size: 12px;
+  left: 10px;
+  top: 5px;
+  padding: 5px;
+}
+.cal-container .calc-card .card-body .curr-price input,
+.cal-container .calc-card .card-body .curr-amount input {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 30px;
+  width: 400px;
+  outline: none;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 70px;
+  caret-color: #ff632a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(255, 99, 42, 0.5), rgba(0, 0, 0, 0.6)), url("../imgs/black-tether-cryptocurrency-di8od2gwxqb07w4d.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .cont-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  padding: 20px 0;
+  height: 600px;
+  gap: 20px;
+}
+body .cont-container img.main-logo {
+  width: 200px;
+}
+body .container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+  overflow-y: scroll;
+  gap: 20px;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body .container .card {
+  display: flex;
+  padding: 10px;
+  width: 400px;
+  gap: 10px;
+  background: rgba(65, 64, 66, 0.2);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+body .container .card img {
+  width: 60px;
+  height: 60px;
+}
+body .container .card p {
+  font-size: 12px;
+}
+body .container .card p:nth-child(2) {
+  font-size: 20px;
+  font-weight: bold;
+}
+body .container .card p > span:nth-child(2) {
+  opacity: 0.5;
+}
+body .container .card .bg-full {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  z-index: -1;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%) rotate(30deg);
+  opacity: 0.5;
+}
+body .container .card .calc {
+  position: absolute;
+  padding: 10px;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.5s ease-in-out all;
+}
+body .container .card .calc:hover {
+  background: #ff632a;
+  color: #fff;
+}
+body .container::-webkit-scrollbar {
+  width: 10px;
+}
+body .container::-webkit-scrollbar-track {
+  background: #414042;
+}
+body .container::-webkit-scrollbar-thumb {
+  background: #ff632a;
+}
+body .container::-webkit-scrollbar-thumb:hover {
+  background: #ff632a;
+}/*# sourceMappingURL=style.css.map */
