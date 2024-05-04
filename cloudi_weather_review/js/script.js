@@ -87,31 +87,40 @@ arrowBack.addEventListener('click', _ => {
 });
 
 function getTodaysDate(coordinates) {
-    console.log(coordinates);
-    console.log(coordinates.lon)
-    console.log(coordinates.lat)
-    fetch(`https://api.ipgeolocation.io/timezone?apiKey=${timeZoneApiKey}&lat=${parseInt(coordinates.lat)}&long=${parseInt(coordinates.lon)}`).then(response => response.json()).then(result => modDate(result));
+    fetch(`http://api.timezonedb.com/v2.1/get-time-zone?key=PSI3FWR5TR5N&format=json&by=position&lat=${coordinates.lat}&lng=${coordinates.lon}`).then(res => res.json()).then(data => modDate(data));
 }
 
 function modDate(res) {
-    let dateTxt = res.date_time_txt.split(' ');
-    document.querySelector('.day-date').innerText = dateTxt.splice(0, 4).join(' ');
-    modTime(dateTxt.splice(0, 4).join(' '));
+    // let dateTxt = res.date_time_txt.split(' ');
+    // document.querySelector('.day-date').innerText = dateTxt.splice(0, 4).join(' ');
+    // console.log(res);
+    // modTime(dateTxt.splice(0, 4).join(' '));
+
+    let { day, hour, millisecond, minute, month, second, year } = luxon.DateTime.now().setZone(res.zoneName).c,
+        months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    // console.log(modTime(luxon.DateTime.now().setZone(res.zoneName).toFormat("HH:mm:ss")))
+    // console.log(luxon.DateTime.now().setZone(res.zoneName).c)
+    document.querySelector('.day-date').innerText = `${months[month - 1]} ${day}, ${year}`;
+    modTime(hour, minute, second)
 }
 
-function modTime(time) {
-    let [h, m, s] = time.split(':'),
-        st = '';
-    console.log(h);
-    console.log(m);
-    console.log(s);
+function modTime(h, m, s) {
+    let st = '';
     if (h > 12) {
         h -= 12;
         st = "PM"
-        h < 10 ? h = `0${h}` : h;
-    } else {
+    } else if (h >= 12 && m > 0 && s > 0) {
+        st = "PM"
+    }
+    else {
         st = "AM";
         h = h;
     }
+
+    h < 10 ? h = `0${h}` : h;
+    m < 10 ? m = `0${h}` : m;
+    s < 10 ? s = `0${h}` : s;
+
     document.querySelector('.day-time').innerText = `${h}:${m}:${s} ${st}`;
 }
