@@ -12,7 +12,7 @@ fetch(`http://api.aladhan.com/v1/timingsByCity?city=Giza&country=Egypt&method=5`
             m = parseInt(data.data.timings[ele.en].split(":")[1]),
             ampm = h > 12 ? "PM" : "AM",
             h_mod = h > 12 ? h - 12 < 10 ? `0${h - 12}` : h - 12 : h < 10 ? `0${h}` : h,
-            m_mod = m > 10 ? m : `0${m}`;
+            m_mod = m > 9 ? m : `0${m}`;
         timesCont.innerHTML += `<p class='next'><span>${ele.en} &#160 ${ele.ar}</span><span>${h_mod} : ${m_mod}<i>${ampm}</i></span></p>`;
     })
 });
