@@ -21,9 +21,10 @@ body .logos {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   position: relative;
   margin-top: 20px;
+  margin-bottom: -10px;
 }
 body .logos::before {
   position: absolute;
@@ -33,19 +34,19 @@ body .logos::before {
   background: #fff;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-70%, -50%) rotate(45deg);
 }
 body img.mz-logo {
-  width: 30px;
+  height: 40px;
 }
 body img.brand-icon {
-  width: 40px;
+  height: 40px;
 }
 body img.brandname {
-  width: 200px;
+  width: 210px;
 }
 body h1 {
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
   color: #fff;
   width: 70%;
@@ -124,4 +125,110 @@ body .apps-cont a span {
   transform: translateY(-30px);
   transition: 0.5s ease-in-out all;
   opacity: 0;
+}
+body .app_window_container {
+  position: absolute;
+  background: rgba(230, 44, 19, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  z-index: 100000000000000000000000000000000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  transition: 0.5s ease-in-out all;
+}
+body .app_window_container.active {
+  width: 100%;
+  height: 100%;
+}
+body .app_window_container .app_window {
+  width: 700px;
+  height: 500px;
+  background: rgba(230, 44, 19, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body .app_window_container .app_window .app_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+body .app_window_container .app_window .app_logo img {
+  width: 50px;
+}
+body .app_window_container .app_window .app_logo span {
+  font-size: 35px;
+  color: #fff;
+}
+body .app_window_container .app_window .close_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  color: #fff;
+  transition: 0.5s ease-in-out all;
+  cursor: pointer;
+}
+body .app_window_container .app_window .close_btn:hover {
+  background: #fff;
+  color: #e62c13;
+}
+body .app_window_container .app_window .app_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+body .app_window_container .app_window .app_btns a {
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+}
+body .app_window_container .app_window .app_btns a span {
+  font-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .app_window_container .app_window .app_btns a span.material-symbols-outlined {
+  color: #fff;
+  transition: 0.5s ease-in-out all;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+body .app_window_container .app_window .app_btns a span:hover.material-symbols-outlined {
+  color: #e62c13;
+  background: #fff;
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+body .app_window_container .app_window .demo_display {
+  margin-top: 20px;
+}
+body .app_window_container .app_window .demo_display .demo {
+  width: 600px;
+  height: 320px;
+}
+body .app_window_container .app_window .demo_display .demo .demo_cont {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+body .app_window_container .app_window .demo_display .demo .demo_cont img {
+  width: 100%;
+  position: absolute;
+}
+body .app_window_container .app_window .demo_display .demo .demo_cont video {
+  top: 6px;
+  left: 78px;
+  width: 444px;
+  position: absolute;
 }/*# sourceMappingURL=styles.css.map */
