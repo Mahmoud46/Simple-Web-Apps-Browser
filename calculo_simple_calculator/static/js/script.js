@@ -23,11 +23,11 @@ document.querySelectorAll(".btns button").forEach((btn) => {
 
 			proc_steps.value = pro_symbols;
 		} else if (btn.getAttribute("value") == "=") {
-			if (countDecimalPlaces(pro_values) == 0)
+			if (countDecimalPlaces(eval(pro_values)) == 0)
 				proc_res.value = Math.round(eval(pro_values));
-			else if (countDecimalPlaces(pro_values) == 1)
+			else if (countDecimalPlaces(eval(pro_values)) == 1)
 				proc_res.value = eval(pro_values).toFixed(1);
-			else if (countDecimalPlaces(pro_values) > 1)
+			else if (countDecimalPlaces(eval(pro_values)) > 1)
 				proc_res.value = eval(pro_values).toFixed(3);
 		} else {
 			if (
