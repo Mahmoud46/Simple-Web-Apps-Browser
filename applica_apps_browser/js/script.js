@@ -1,5 +1,5 @@
 const hrefs = [
-		"./calculo/calculo.html",
+		"./calculo_simple_calculator/calculo.html",
 		"./clk_analog_clock/clk_analog_clock.html",
 		"./cloudi_weather_review/cloudi_weather_review.html",
 		"./croppit_image_cropper/croppit_image_cropper.html",
@@ -20,7 +20,7 @@ const hrefs = [
 		"./sketshh_painting_webapp/sketshh_painting_webapp.html",
 		"./snapzio_screenshot_capture/snapzio_screenshot_capture.html",
 		"./tabb_typing_test_game/tabb_typing_test_game.html",
-		"./taskify_todo_list/taskify_todo_list.html",
+		"../novi/novi.html",
 		"./tranzlate_language_translator/tranzlate_language_translator.html",
 		"./up_vue_video_player/up_vue_video_player.html",
 		"./vi_vid_cash_credit_card/vi_vid_cash_credit_card.html",
@@ -32,7 +32,7 @@ const hrefs = [
 		"https://mahmoud46.github.io/Shoot_and_Score_ball_kick_simple_simulation/",
 	],
 	image_srcs = [
-		"./calculo/static/imgs/Calculo.svg",
+		"./calculo_simple_calculator/static/imgs/Calculo.svg",
 		"./clk_analog_clock/imgs/fav-icon.svg",
 		"./cloudi_weather_review/imgs/fav-icon.svg",
 		"./croppit_image_cropper/imgs/fav-icon.svg",
@@ -53,7 +53,7 @@ const hrefs = [
 		"./sketshh_painting_webapp/imgs/fav-icon.svg",
 		"./snapzio_screenshot_capture/imgs/fav-icon.svg",
 		"./tabb_typing_test_game/imgs/fav-icon.svg",
-		"./taskify_todo_list/imgs/fav-icon.svg",
+		"./novi/static/icons/Novi.svg",
 		"./tranzlate_language_translator/imgs/fav-icon.svg",
 		"./up_vue_video_player/imgs/fav-icon.svg",
 		"./vi_vid_cash_credit_card/imgs/fav-icon.svg",
@@ -86,7 +86,7 @@ const hrefs = [
 		"Sketshh",
 		"Snapzio",
 		"Tabb",
-		"Taskify",
+		"Novi",
 		"Tranzlate",
 		"Up Vue",
 		"Vi vid cash",
@@ -105,7 +105,7 @@ const hrefs = [
 		"./applica_apps_browser/videos/Ding.mp4",
 		"./applica_apps_browser/videos/Exchnge.mp4",
 		"./applica_apps_browser/videos/Exprot.mp4",
-		"./applica_apps_browser/videos/Aplica_replacement.mp4",
+		"./applica_apps_browser/videos/Eztext.mp4",
 		"./applica_apps_browser/videos/Icode.mp4",
 		"./applica_apps_browser/videos/Imagz.mp4",
 		"./applica_apps_browser/videos/Keypass.mp4",
@@ -119,16 +119,16 @@ const hrefs = [
 		"./applica_apps_browser/videos/Sketshh.mp4",
 		"./applica_apps_browser/videos/Snapzio.mp4",
 		"./applica_apps_browser/videos/Tabb.mp4",
-		"./applica_apps_browser/videos/Aplica_replacement.mp4",
+		"./applica_apps_browser/videos/Novi.mp4",
 		"./applica_apps_browser/videos/Tranzlate.mp4",
 		"./applica_apps_browser/videos/Up Vue.mp4",
 		"./applica_apps_browser/videos/Vi Vid Cash.mp4",
 		"./applica_apps_browser/videos/Vibs.mp4",
 		"./applica_apps_browser/videos/Wekks.mp4",
 		"./applica_apps_browser/videos/Rush Quiz.mp4",
-		"./applica_apps_browser/videos/Aplica_replacement.mp4",
-		"./applica_apps_browser/videos/Aplica_replacement.mp4",
-		"./applica_apps_browser/videos/Aplica_replacement.mp4",
+		"./applica_apps_browser/videos/Mushaf.mp4",
+		"./applica_apps_browser/videos/EtherEye.mp4",
+		"./applica_apps_browser/videos/Shoot&Score.mp4",
 	];
 
 document.querySelectorAll(".apps-cont a").forEach((btn) =>
@@ -138,11 +138,11 @@ document.querySelectorAll(".apps-cont a").forEach((btn) =>
 	})
 );
 
-document
-	.querySelector(".close_btn")
-	.addEventListener("click", (_) =>
-		document.querySelector(".app_window_container").classList.remove("active")
-	);
+document.querySelector(".close_btn").addEventListener("click", (_) => {
+	document.querySelector(".app_window_container").classList.remove("active");
+	document.querySelector(".app_window_container .demo_display video").src =
+		"./applica_apps_browser/videos/Aplica_replacement.mp4";
+});
 
 function activateAppWindow(app_num) {
 	document.querySelector(".app_window_container .app_logo img").src =

@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #121212;
+}
+body .list_container {
+  position: relative;
+  background: #1e1e1e;
+  color: #fff;
+  width: 420px;
+  height: 580px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  overflow: hidden;
+}
+body .list_container .logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 20px;
+  gap: 10px;
+  padding-top: 20px;
+}
+body .list_container .logo img {
+  width: 50px;
+}
+body .list_container .logo span {
+  font-size: 25px;
+}
+body .list_container .container_header {
+  padding: 0 20px;
+  position: relative;
+  gap: 20px;
+  width: 100%;
+}
+body .list_container .container_header h1 {
+  font-size: 50px;
+  font-weight: 300;
+}
+body .list_container .container_header p {
+  font-size: 14px;
+  color: #858585;
+}
+body .list_container .container_header .add_task {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .list_container .container_header .add_task span.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 0, "opsz" 24;
+  font-size: 40px;
+}
+body .list_container .container_header .add_task::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(#ff2079, #440bd4);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+  z-index: -1;
+  transform: rotate(45deg);
+  transition: 0.5s ease-in-out all;
+}
+body .list_container .container_header .add_task:hover::after {
+  transform: rotate(225deg);
+}
+body .list_container .tasks_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: linear-gradient(#232323, #1e1e1e);
+  padding: 40px 20px;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 30px;
+  gap: 10px;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body .list_container .tasks_container::-webkit-scrollbar {
+  width: 10px;
+}
+body .list_container .tasks_container::-webkit-scrollbar-track {
+  background: #2c2c2c;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 30px;
+}
+body .list_container .tasks_container::-webkit-scrollbar-thumb {
+  background: rgba(68, 11, 212, 0.2);
+  border-radius: 30px;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out all;
+  transition: 0.5s ease-in-out all;
+}
+body .list_container .tasks_container::-webkit-scrollbar-thumb:hover {
+  background: rgba(68, 11, 212, 0.5);
+}
+body .list_container .tasks_container .task_card {
+  display: flex;
+  background: #1e1e1e;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  gap: 10px;
+}
+body .list_container .tasks_container .task_card input {
+  font-size: 17px;
+  width: 220px;
+  color: #fff;
+  background: none;
+  border: none;
+  outline: none;
+  transition: 0.5s ease-in-out all;
+}
+body .list_container .tasks_container .task_card .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+  cursor: pointer;
+  transition: 0.5s ease-in-out all;
+}
+body .list_container .tasks_container .task_card .material-symbols-outlined:not(.check_btn):hover {
+  font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 0, "opsz" 24;
+}
+body .list_container .tasks_container .task_card .material-symbols-outlined.delete_btn:hover {
+  color: #fff;
+  background: #ff2079;
+}
+body .list_container .tasks_container .task_card .material-symbols-outlined.edit_btn:hover {
+  color: #fff;
+  background: #440bd4;
+}
+body .list_container .tasks_container .task_card .time_cont {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  color: #858585;
+  font-size: 13px;
+}
+body .list_container .tasks_container .task_card .time_cont .material-symbols-outlined {
+  font-size: 16px;
+}
+body .list_container .tasks_container .task_card .btns {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+body .list_container .tasks_container .task_card .btns span {
+  background: #2c2c2c;
+  padding: 5px;
+  border-radius: 50%;
+}
+body .list_container .tasks_container .task_card.checked input {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px; /* Adjust thickness */
+  text-decoration-color: #fff; /* Adjust color */
+}
+body .list_container .tasks_container .task_card.checked .check_btn.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 0, "opsz" 24;
+}
+body .list_container .tasks_container .task_card .more_info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+}
+body .list_container p.hint {
+  color: #858585;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+}
+body .list_container .task_form {
+  position: absolute;
+  background: #1e1e1e;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s ease-in-out all;
+  bottom: -100%;
+}
+body .list_container .task_form.active {
+  bottom: 0;
+}
+body .list_container .task_form.active .form_header,
+body .list_container .task_form.active .task_content_form {
+  opacity: 1;
+}
+body .list_container .task_form.active .task_content_form {
+  padding: 30px 20px;
+  transform: translateY(0);
+}
+body .list_container .task_form.active .close_btn span {
+  transform: rotate(90deg);
+}
+body .list_container .task_form .form_header {
+  padding: 20px;
+  position: relative;
+  gap: 20px;
+  width: 100%;
+}
+body .list_container .task_form .form_header h1 {
+  font-size: 40px;
+  font-weight: 300;
+}
+body .list_container .task_form .form_header .create_update_task_btn {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .list_container .task_form .form_header .create_update_task_btn span.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 0, "opsz" 24;
+  font-size: 40px;
+}
+body .list_container .task_form .form_header .create_update_task_btn::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(#ff2079, #440bd4);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+  z-index: -1;
+  transform: rotate(45deg);
+  transition: 0.5s ease-in-out all;
+}
+body .list_container .task_form .form_header .create_update_task_btn:hover::after {
+  transform: rotate(225deg);
+}
+body .list_container .task_form .task_content_form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: linear-gradient(#232323, #1e1e1e);
+  padding: 30px 20px;
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 30px;
+  gap: 10px;
+}
+body .list_container .task_form .task_content_form .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+  cursor: pointer;
+  transition: 0.5s ease-in-out all;
+}
+body .list_container .task_form .task_content_form .material-symbols-outlined:hover {
+  font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 0, "opsz" 24;
+}
+body .list_container .task_form .task_content_form .task_title {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  align-items: flex-start;
+  gap: 5px;
+}
+body .list_container .task_form .task_content_form .task_title label {
+  color: #858585;
+  cursor: pointer;
+}
+body .list_container .task_form .task_content_form .task_title input {
+  background: #121212;
+  border: none;
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  color: #858585;
+  border-radius: 30px;
+}
+body .list_container .task_form .task_content_form .task_description {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  align-items: flex-start;
+  gap: 5px;
+}
+body .list_container .task_form .task_content_form .task_description label {
+  color: #858585;
+  cursor: pointer;
+}
+body .list_container .task_form .task_content_form .task_description textarea {
+  background: #121212;
+  border: none;
+  width: 100%;
+  padding: 15px 20px;
+  outline: none;
+  color: #858585;
+  border-radius: 30px;
+  resize: none;
+  height: 100px;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body .list_container .task_form .task_content_form .task_description textarea::-webkit-scrollbar {
+  width: 10px;
+}
+body .list_container .task_form .task_content_form .task_description textarea::-webkit-scrollbar-track {
+  background: #2c2c2c;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+body .list_container .task_form .task_content_form .task_description textarea::-webkit-scrollbar-thumb {
+  background: rgba(68, 11, 212, 0.2);
+  border-radius: 30px;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out all;
+  transition: 0.5s ease-in-out all;
+}
+body .list_container .task_form .task_content_form .task_description textarea::-webkit-scrollbar-thumb:hover {
+  background: rgba(68, 11, 212, 0.5);
+}
+body .list_container .task_form .task_content_form .task_time_date {
+  /* Remove the date input icon */
+  /* Remove the time input icon */
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+body .list_container .task_form .task_content_form .task_time_date input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+body .list_container .task_form .task_content_form .task_time_date input[type=time]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+body .list_container .task_form .task_content_form .task_time_date div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+body .list_container .task_form .task_content_form .task_time_date div input {
+  background: #121212;
+  color: #858585;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+}
+body .list_container .task_form .task_content_form .task_time_date div.task_date {
+  transition: 0.5s ease-in-out all;
+}
+body .list_container .task_form .task_content_form .task_time_date div.task_date.inactive {
+  opacity: 0.5;
+  pointer-events: none;
+}
+body .list_container .task_form .task_content_form .task_time_date div:last-child {
+  background: #121212;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+body .list_container .task_form .task_content_form .task_time_date div:last-child.active {
+  background: #440bd4;
+}
+body .list_container .task_form .task_content_form .task_time_date div:last-child.active .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 0, "opsz" 24;
+}
+body .list_container .task_form .form_header {
+  opacity: 0;
+  transition: 0.5s ease-in-out all;
+  transition-delay: 0.5s;
+}
+body .list_container .task_form .task_content_form {
+  padding: 0;
+  transform: translateY(100%);
+  transition: 0.3s ease-in-out all;
+  transition-delay: 0.5s;
+}
+body .list_container .task_form .close_btn {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .list_container .task_form .close_btn span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #858585;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  transition: 0.5s ease-in-out all;
+  transform: rotate(-90deg);
+}
+body .list_container .task_form .close_btn span.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+}
+body .list_container .task_form .close_btn span:hover {
+  color: #fff;
+}/*# sourceMappingURL=styles.css.map */

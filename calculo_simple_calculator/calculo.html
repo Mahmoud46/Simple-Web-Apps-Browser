@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./static/sass/styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<link
+			rel="shortcut icon"
+			href="./static/imgs/Calculo.svg"
+			type="image/x-icon"
+		/>
+		<title>Calculo</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="logo">
+				<img src="./static/imgs/Calculo.svg" alt="" />
+				<span>Calculo</span>
+			</div>
+			<div class="res_container">
+				<input id="pro_steps" type="text" value="0" readonly />
+				<input type="number" id="pro_res" readonly value="0" />
+			</div>
+			<div class="btns">
+				<button value="AC" class="ac_btn"><span>AC</span></button>
+				<button value="BS" class="bs">
+					<span class="material-symbols-outlined"> backspace </span>
+				</button>
+				<button class="btn_symb mod" value="%" sym=" % ">
+					<span>%</span>
+				</button>
+				<button class="btn_symb" value="/" sym=" ÷ "><span>÷</span></button>
+				<button value="7" sym="7"><span>7</span></button>
+				<button value="8" sym="8"><span>8</span></button>
+				<button value="9" sym="9"><span>9</span></button>
+				<button class="btn_symb" value="*" sym=" × "><span>×</span></button>
+				<button value="4" sym="4"><span>4</span></button>
+				<button value="5" sym="5"><span>5</span></button>
+				<button value="6" sym="6"><span>6</span></button>
+				<button class="btn_symb" value="+" sym=" + "><span>+</span></button>
+				<button value="1" sym="1"><span>1</span></button>
+				<button value="2" sym="2"><span>2</span></button>
+				<button value="3" sym="3"><span>3</span></button>
+				<button class="btn_symb" value="-" sym=" - "><span>-</span></button>
+				<button value="0" sym="0"><span>0</span></button>
+				<button value="." sym="."><span>.</span></button>
+				<button value="=" class="eq_btn"><span>=</span></button>
+			</div>
+		</div>
+
+		<script src="./static/js/script.js"></script>
+	</body>
+</html>
