@@ -20,7 +20,7 @@ const hrefs = [
 		"./sketshh_painting_webapp/sketshh_painting_webapp.html",
 		"./snapzio_screenshot_capture/snapzio_screenshot_capture.html",
 		"./tabb_typing_test_game/tabb_typing_test_game.html",
-		"../novi/novi.html",
+		"./novi/novi.html",
 		"./tranzlate_language_translator/tranzlate_language_translator.html",
 		"./up_vue_video_player/up_vue_video_player.html",
 		"./vi_vid_cash_credit_card/vi_vid_cash_credit_card.html",
