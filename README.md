@@ -3,4 +3,4 @@
 <h1>Overview</h1>
 <p>This application serves as a user-friendly browser for the simple web apps I've developed, making it easy for anyone to navigate and use them.</p>
 <h1>Note</h1>
-<p>Experience the full potential of the simulation with the <a href=" interactive demo">interactive demo</a>.</p>
+<p>Experience the full potential of the simulation with the <a href="https://mahmoud46.github.io/Simple-Web-Apps-Browser/">interactive demo</a>.</p>
