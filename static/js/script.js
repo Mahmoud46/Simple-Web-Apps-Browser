@@ -27,7 +27,7 @@ const hrefs = [
 		"./apps/vibs_music_player/vibs_music_player.html",
 		"./apps/wekks_calendar_display/wekks_calendar_display.html",
 		"https://mahmoud46.github.io/Rush_quiz/",
-		"https://mahmoud46.github.io/Mushaf_quran_reader_and_audio_player/",
+		"https://github.com/Mahmoud46/Simple-Web-Apps-Browser.git",
 		"./apps/ethereye_cryptocurrencies_price_tracker/ethereye.html",
 		"https://mahmoud46.github.io/Sports-Enigineering-Final-Project/",
 	],
