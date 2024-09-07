@@ -12,19 +12,19 @@ body {
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
 	gap: 30px;
 	position: relative;
-
+	padding: 20px;
 	.logos {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 30px;
 		position: relative;
-		margin-top: 20px;
+
 		margin-bottom: -10px;
 		&::before {
 			position: absolute;
@@ -57,6 +57,7 @@ body {
 		text-align: center;
 		color: #fff;
 		width: 70%;
+		font-weight: 600;
 		line-height: 50px;
 	}
 
@@ -68,7 +69,7 @@ body {
 		flex-wrap: wrap;
 		gap: 0;
 		margin-bottom: 20px;
-		height: 300px;
+		height: 500px;
 		overflow: hidden;
 		overflow-y: scroll;
 
