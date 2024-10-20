@@ -13,6 +13,7 @@ let task_flag = "create",
 	edited_card_id = "",
 	checked_tasks_counter = 0;
 
+window.localStorage.setItem("checked_tasks_counter", checked_tasks_counter);
 checked_tasks_counter = localStorage.getItem("checked_tasks_counter");
 getDataFromLocalStorage();
 // Get today
