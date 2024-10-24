@@ -47,5 +47,19 @@
 		"bg": "./static/imgs/bgs/calculo.png",
 		"link": "./apps/calculo_simple_calculator/calculo.html",
 		"size": ""
+	},
+	{
+		"title": "Icode",
+		"icon": "./static/imgs/white_imgs/icode_white.png",
+		"bg": "./static/imgs/bgs/icode.png",
+		"link": "./apps/icode_live_code_editor/icode_live_code_editor.html",
+		"size": "wide"
+	},
+	{
+		"title": "EtherEye",
+		"icon": "./static/imgs/white_imgs/ethereye_white.png",
+		"bg": "./static/imgs/bgs/ethereye.png",
+		"link": "./apps/ethereye_cryptocurrencies_price_tracker/ethereye.html",
+		"size": ""
 	}
 ]
