@@ -61,5 +61,26 @@
 		"bg": "./static/imgs/bgs/ethereye.png",
 		"link": "./apps/ethereye_cryptocurrencies_price_tracker/ethereye.html",
 		"size": ""
+	},
+	{
+		"title": "Tabb",
+		"icon": "./static/imgs/white_imgs/tabb_white.png",
+		"bg": "./static/imgs/bgs/tabb.png",
+		"link": "./apps/tabb_typing_test_game/tabb_typing_test_game.html",
+		"size": ""
+	},
+	{
+		"title": "Vibs",
+		"icon": "./static/imgs/white_imgs/vibs_white.png",
+		"bg": "./static/imgs/bgs/vibs.png",
+		"link": "./apps/vibs_music_player/vibs_music_player.html",
+		"size": "tall"
+	},
+	{
+		"title": "Up Vue",
+		"icon": "./static/imgs/white_imgs/upvue_white.png",
+		"bg": "./static/imgs/bgs/upvue.png",
+		"link": "./apps/up_vue_video_player/up_vue_video_player.html",
+		"size": "wide"
 	}
 ]

@@ -95,7 +95,7 @@ body section .app .app_head {
   z-index: 3;
 }
 body section .app .app_head img {
-  width: 30px;
+  height: 30px;
 }
 body section .app .app_head span {
   font-size: 30px;
@@ -164,7 +164,7 @@ body section .big .app_head {
   gap: 20px;
 }
 body section .big .app_head img {
-  width: 60px;
+  height: 60px;
 }
 body section .big .app_head span {
   font-size: 50px;
