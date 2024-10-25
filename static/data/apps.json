@@ -82,5 +82,40 @@
 		"bg": "./static/imgs/bgs/upvue.png",
 		"link": "./apps/up_vue_video_player/up_vue_video_player.html",
 		"size": "wide"
+	},
+	{
+		"title": "Clk",
+		"icon": "./static/imgs/white_imgs/clk_white.png",
+		"bg": "./static/imgs/bgs/clk.png",
+		"link": "./apps/clk_analog_clock/clk_analog_clock.html",
+		"size": ""
+	},
+	{
+		"title": "Cloudi",
+		"icon": "./static/imgs/white_imgs/cloudi_white.png",
+		"bg": "./static/imgs/bgs/cloudi.png",
+		"link": "./apps/cloudi_weather_review/cloudi_weather_review.html",
+		"size": ""
+	},
+	{
+		"title": "Croppit",
+		"icon": "./static/imgs/white_imgs/croppit_white.png",
+		"bg": "./static/imgs/bgs/croppit.png",
+		"link": "./apps/croppit_image_cropper/croppit_image_cropper.html",
+		"size": "tall"
+	},
+	{
+		"title": "Ding",
+		"icon": "./static/imgs/white_imgs/ding_white.png",
+		"bg": "./static/imgs/bgs/ding.png",
+		"link": "./apps/ding_alarm_clock/ding_alarm_clock.html",
+		"size": ""
+	},
+	{
+		"title": "Exchnge",
+		"icon": "./static/imgs/white_imgs/exchnge_white.png",
+		"bg": "./static/imgs/bgs/exchnge.png",
+		"link": "./apps/exchnge_currency_converter/exchnge_currency_converter.html",
+		"size": ""
 	}
 ]
