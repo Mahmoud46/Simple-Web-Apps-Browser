@@ -117,5 +117,33 @@
 		"bg": "./static/imgs/bgs/exchnge.png",
 		"link": "./apps/exchnge_currency_converter/exchnge_currency_converter.html",
 		"size": ""
+	},
+	{
+		"title": "Exprot",
+		"icon": "./static/imgs/white_imgs/exprot_white.png",
+		"bg": "./static/imgs/bgs/exprot.png",
+		"link": "./apps/exprot_save_text_as_file/exprot_save_text_as_file.html",
+		"size": "wide"
+	},
+	{
+		"title": "Eztext",
+		"icon": "./static/imgs/white_imgs/eztext_white.png",
+		"bg": "./static/imgs/bgs/eztext.png",
+		"link": "./apps/eztext_text_to_speech/eztext_text_to_speech.html",
+		"size": "tall"
+	},
+	{
+		"title": "Keypass",
+		"icon": "./static/imgs/white_imgs/keypass_white.png",
+		"bg": "./static/imgs/bgs/keypass.png",
+		"link": "./apps/keypass_password_generator/keypass_password_generator.html",
+		"size": ""
+	},
+	{
+		"title": "Imagz",
+		"icon": "./static/imgs/white_imgs/imagz_white.png",
+		"bg": "./static/imgs/bgs/imagz.png",
+		"link": "./apps/imagz_image_editor/imagz_image_editor.html",
+		"size": "wide"
 	}
 ]
