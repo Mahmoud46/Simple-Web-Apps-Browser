@@ -145,5 +145,33 @@
 		"bg": "./static/imgs/bgs/imagz.png",
 		"link": "./apps/imagz_image_editor/imagz_image_editor.html",
 		"size": "wide"
+	},
+	{
+		"title": "Wekks",
+		"icon": "./static/imgs/white_imgs/imagz_white.png",
+		"bg": "./static/imgs/bgs/wekks.png",
+		"link": "./apps/wekks_calendar_display/wekks_calendar_display.html",
+		"size": "tall"
+	},
+	{
+		"title": "Tranzlate",
+		"icon": "./static/imgs/white_imgs/imagz_white.png",
+		"bg": "./static/imgs/bgs/tranzlate.png",
+		"link": "./apps/tranzlate_language_translator/tranzlate_language_translator.html",
+		"size": ""
+	},
+	{
+		"title": "Vi Vid Cash",
+		"icon": "./static/imgs/white_imgs/imagz_white.png",
+		"bg": "./static/imgs/bgs/vividcash.png",
+		"link": "./apps/vi_vid_cash_credit_card/vi_vid_cash_credit_card.html",
+		"size": "tall"
+	},
+	{
+		"title": "Snapzio",
+		"icon": "./static/imgs/white_imgs/imagz_white.png",
+		"bg": "./static/imgs/bgs/snapzio.png",
+		"link": "./apps/snapzio_screenshot_capture/snapzio_screenshot_capture.html",
+		"size": ""
 	}
 ]
