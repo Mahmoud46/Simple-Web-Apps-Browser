@@ -173,5 +173,33 @@
 		"bg": "./static/imgs/bgs/snapzio.png",
 		"link": "./apps/snapzio_screenshot_capture/snapzio_screenshot_capture.html",
 		"size": ""
+	},
+	{
+		"title": "Salat",
+		"icon": "./static/imgs/white_imgs/salat_white.png",
+		"bg": "./static/imgs/bgs/salat.png",
+		"link": "./apps/salat_pray_times/salat_pray_times.html",
+		"size": ""
+	},
+	{
+		"title": "Sayinz",
+		"icon": "./static/imgs/white_imgs/sayinz_white.png",
+		"bg": "./static/imgs/bgs/sayinz.png",
+		"link": "./apps/sayinz_random_quotes_generator/sayinz_random_quotes_generator.html",
+		"size": ""
+	},
+	{
+		"title": "Scalinng",
+		"icon": "./static/imgs/white_imgs/scalinng_white.png",
+		"bg": "./static/imgs/bgs/scalinng.png",
+		"link": "./apps/scalinng_images_resize/scalinng_images_resize.html",
+		"size": "tall"
+	},
+	{
+		"title": "Scrabz",
+		"icon": "./static/imgs/white_imgs/scrabz_white.png",
+		"bg": "./static/imgs/bgs/scrabz.png",
+		"link": "./apps/scrabz_scrambel_game/scrabz_scrambel_game.html",
+		"size": "wide"
 	}
 ]
