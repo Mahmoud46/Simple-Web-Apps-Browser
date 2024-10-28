@@ -201,5 +201,19 @@
 		"bg": "./static/imgs/bgs/scrabz.png",
 		"link": "./apps/scrabz_scrambel_game/scrabz_scrambel_game.html",
 		"size": "wide"
+	},
+	{
+		"title": "Klik",
+		"icon": "./static/imgs/white_imgs/klik_white.png",
+		"bg": "./static/imgs/bgs/klik.png",
+		"link": "./apps/klik_detect_key_pressed/klik_detect_key_pressed.html",
+		"size": ""
+	},
+	{
+		"title": "My Clock X",
+		"icon": "./static/imgs/white_imgs/myclockx_white.png",
+		"bg": "./static/imgs/bgs/myclockx.png",
+		"link": "./apps/klik_detect_key_pressed/klik_detect_key_pressed.html",
+		"size": "wide"
 	}
 ]
