@@ -89,7 +89,7 @@ volumeSeek.addEventListener("input", (_) => {
 
 setInterval((_) => {
 	seekBar.value = music.currentTime;
-	currentTime.innerText = foramtTime(music.currentTime);
+	currentTime.innerText = formatTime(music.currentTime);
 }, 500);
 
 setMusic(currentMusic);
