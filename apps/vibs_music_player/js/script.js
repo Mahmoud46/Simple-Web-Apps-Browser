@@ -34,7 +34,7 @@ playPauseBtn.addEventListener("click", (_) => {
 
 seekBar.addEventListener("input", (_) => {
 	music.currentTime = seekBar.value;
-	currentTime.innerText = foramtTime(music.currentTime);
+	currentTime.innerText = formatTime(music.currentTime);
 });
 
 music.addEventListener("ended", (_) => {
