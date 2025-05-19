@@ -109,12 +109,12 @@ function setMusic(i) {
 	songDisk.style.backgroundImage = `url('${song.cover}')`;
 	document.body.style.backgroundImage = `linear-gradient(rgba(155, 155, 155, 0.6), rgba(117, 117, 117, 0.9)), url('${song.cover}')`;
 
-	setTimeout((_) => {
-		songDuration.innerText = foramtTime(+music.duration);
-		seekBar.max = +music.duration;
-	}, 300);
+	music.addEventListener("loadedmetadata", () => {
+		songDuration.innerText = formatTime(music.duration);
+		seekBar.max = music.duration;
+	});
 }
-function foramtTime(time) {
+function formatTime(time) {
 	let min = Math.floor(time / 60),
 		sec = Math.floor(time % 60);
 	min = min < 10 ? `0${min}` : min;
